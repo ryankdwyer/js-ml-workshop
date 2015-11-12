@@ -1,4 +1,3 @@
-
 var KNN = require('./knn');
 var expect = require('chai').expect;
 var mnist = require('../lib/mnist_reader');
@@ -79,7 +78,7 @@ describe('Testing the basic KNN functionality.', function(){
 		  However, if you implement these functions, it will be much easier to write predictSingle,
 		  and they do provide a useful way to break down the things that predictSingle will need to do.
 		*/
-		xdescribe('Optional helper functions to be used in predict and predictSingle', function(){ 
+		describe('Optional helper functions to be used in predict and predictSingle', function(){
 
 			/* The purpose of the function '_distance' is to find the Euclidean norm
 			   as between two vectors.
@@ -204,11 +203,14 @@ describe('Testing the basic KNN functionality.', function(){
 			expect(typeof knn.predict).to.equal('function');
 			//Making fake data
 			var typeA = randomPoints(100,[1,1],[0,0]).map(function(n){ return [n,1] });
-			var typeB = randomPoints(100,[1,1],[1,0]).map(function(n){ return [n,0] });
+			var typeB = randomPoints(100,[1,1],[0,1]).map(function(n){ return [n,0] });
 			knn.train(typeA);
 			knn.train(typeB);
-			var sample = randomPoints(100,[1,1],[1,0])
+			var sample = [[0,.5],[0,.5],[1,1.5],[1,1.5]];
 			var results = knn.predict(sample);
+			expect(results).to.eql([1,1,0,0]);
+			expect(results).to.be.instanceOf(Array);
+			expect(results.length).to.equal(sample.length);
 		});
 
 		/* The purpose of score is to take in another set of data in the same format as training data.
@@ -242,12 +244,12 @@ describe('Testing the basic KNN functionality.', function(){
 
 
 /*Switch this to a describe after you've completed the above.*/
-xdescribe('Testing the KNN with data from the MNIST', function(){
+describe('Testing the KNN with data from the MNIST', function(){
 
 	//Need more time, to handle all the data.
 	this.timeout(10000);
 
-	xit('Can handle somewhat chaotic data', function(){
+	it('Can handle somewhat chaotic data', function(){
 		var knn = new KNN(1);
 		var typeA = randomPoints(1000,[1,1],[0,0]).map(function(n){ return [n,0] });
 		var typeB = randomPoints(1000,[1,1],[.75,0]).map(function(n){ return [n,1] });
@@ -277,18 +279,18 @@ xdescribe('Testing the KNN with data from the MNIST', function(){
 	  How could you improve accuracy of the program?
 	  
     */
-	xit('Can be trained off the mnist data', function(done){
+	it('Can be trained off the mnist data', function(done){
 		var allElements = mnist.allElements();			//Should load up all 5000 elements
 		var knn = new KNN(2);
 		var trainingSet = allElements.slice(0,600); 	//Make the training set 
 		var testingSet = allElements.slice(1000,1100);	//Make the testing set
-		knn.train(trainingSet)
+		knn.train(trainingSet);
 		var score = knn.score(testingSet);
 		console.log("The program got a score of " + score + ", which means it got " + (score * 100) + "% correct.");
-
 		var toClassify = testingSet.map(function(n){return n[0]});
 		var toExport = knn.predict(toClassify).map(function(n, index){ return [toClassify[index],n]; } );
-		writer.exportClassified(toExport, done);
+		done();
+		//writer.exportClassified(toExport, done);
 	});
 
 });
