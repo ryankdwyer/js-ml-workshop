@@ -66,6 +66,26 @@ KNN.prototype.score = function (testData) {
 	return getPercentCorrect(expectedResults, testResults);
 };
 
+KNN.prototype._normalize = function () {
+	var normalizedPoints = [],
+		dimensions = getVectorLength(),
+		min,
+		max,
+		normalPt;
+	for (var i = 0; i < this.points.length; i++) {
+		normalizedPoints.push([[],this.points[i][1]]);
+	}
+	for (var i = 0; i < dimensions; i++) {
+		min = getMin(this.points, i);
+		max = getMax(this.points, i);
+		this.points.forEach(function(el, idx) {
+			normalPt = calcNormalized(el[0][i], min, max);
+			normalizedPoints[idx][0].push(normalPt);
+		})
+	}
+	return normalizedPoints;
+};
+
 function vectorSub (vectorA, vectorB) {
 	var result = [];
 	vectorA.forEach(function (el, idx) {
@@ -106,6 +126,22 @@ function getPercentCorrect (expected, actual) {
 		}
 	});
 	return count / expected.length;
+}
+
+function getMin (vector, idx) {
+	return Math.min.apply(null, vector.map(function(el) {return el[0][idx]}));
+}
+
+function getMax (vector, idx) {
+	return Math.max.apply(null, vector.map(function(el) {return el[0][idx]}));
+}
+
+function getVectorLength () {
+	return this.points[0][0].length;
+}
+
+function calcNormalized (x, min, max) {
+	return (x - min) / (max - min);
 }
 
 module.exports = KNN;
