@@ -1,523 +1,214 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'lodash' ]
 2 info using npm@3.3.6
 3 info using node@v5.0.0
 4 silly loadCurrentTree Starting
 5 silly install loadCurrentTree
 6 silly install readLocalPackageData
-7 silly install normalizeTree
-8 silly loadCurrentTree Finishing
-9 silly loadIdealTree Starting
-10 silly install loadIdealTree
-11 silly cloneCurrentTree Starting
-12 silly install cloneCurrentTreeToIdealTree
-13 silly cloneCurrentTree Finishing
-14 silly loadShrinkwrap Starting
-15 silly install loadShrinkwrap
-16 silly loadShrinkwrap Finishing
-17 silly loadAllDepsIntoIdealTree Starting
-18 silly install loadAllDepsIntoIdealTree
-19 silly fetchNamedPackageData lwip
-20 silly mapToRegistry name lwip
-21 silly mapToRegistry using default registry
-22 silly mapToRegistry registry https://registry.npmjs.org/
-23 silly mapToRegistry uri https://registry.npmjs.org/lwip
-24 verbose request uri https://registry.npmjs.org/lwip
-25 verbose request no auth needed
-26 info attempt registry request try #1 at 1:57:36 PM
-27 verbose request id da479ac8a73aaf90
-28 verbose etag "BORYMJV6Z03LG4Z8MTM7W7ILE"
-29 http request GET https://registry.npmjs.org/lwip
-30 http 304 https://registry.npmjs.org/lwip
-31 verbose headers { date: 'Mon, 16 Nov 2015 18:57:37 GMT',
-31 verbose headers   via: '1.1 varnish',
-31 verbose headers   'cache-control': 'max-age=60',
-31 verbose headers   etag: '"BORYMJV6Z03LG4Z8MTM7W7ILE"',
-31 verbose headers   age: '0',
-31 verbose headers   connection: 'keep-alive',
-31 verbose headers   'x-served-by': 'cache-iad2140-IAD',
-31 verbose headers   'x-cache': 'HIT',
-31 verbose headers   'x-cache-hits': '1',
-31 verbose headers   'x-timer': 'S1447700257.051522,VS0,VE12',
-31 verbose headers   vary: 'Accept' }
-32 silly get cb [ 304,
-32 silly get   { date: 'Mon, 16 Nov 2015 18:57:37 GMT',
-32 silly get     via: '1.1 varnish',
-32 silly get     'cache-control': 'max-age=60',
-32 silly get     etag: '"BORYMJV6Z03LG4Z8MTM7W7ILE"',
-32 silly get     age: '0',
-32 silly get     connection: 'keep-alive',
-32 silly get     'x-served-by': 'cache-iad2140-IAD',
-32 silly get     'x-cache': 'HIT',
-32 silly get     'x-cache-hits': '1',
-32 silly get     'x-timer': 'S1447700257.051522,VS0,VE12',
-32 silly get     vary: 'Accept' } ]
-33 verbose etag https://registry.npmjs.org/lwip from cache
-34 verbose get saving lwip to /Users/ryan/.npm/registry.npmjs.org/lwip/.cache.json
-35 silly resolveWithNewModule lwip@0.0.7 checking installable status
-36 silly cache add args [ 'lwip@^0.0.7', null ]
-37 verbose cache add spec lwip@^0.0.7
-38 silly cache add parsed spec Result {
-38 silly cache add   raw: 'lwip@^0.0.7',
-38 silly cache add   scope: null,
-38 silly cache add   name: 'lwip',
-38 silly cache add   rawSpec: '^0.0.7',
-38 silly cache add   spec: '>=0.0.7 <0.0.8',
-38 silly cache add   type: 'range' }
-39 silly addNamed lwip@>=0.0.7 <0.0.8
-40 verbose addNamed ">=0.0.7 <0.0.8" is a valid semver range for lwip
-41 silly addNameRange { name: 'lwip', range: '>=0.0.7 <0.0.8', hasData: false }
-42 silly mapToRegistry name lwip
-43 silly mapToRegistry using default registry
-44 silly mapToRegistry registry https://registry.npmjs.org/
-45 silly mapToRegistry uri https://registry.npmjs.org/lwip
-46 verbose addNameRange registry:https://registry.npmjs.org/lwip not in flight; fetching
-47 verbose get https://registry.npmjs.org/lwip not expired, no request
-48 silly addNameRange number 2 { name: 'lwip', range: '>=0.0.7 <0.0.8', hasData: true }
-49 silly addNameRange versions [ 'lwip',
-49 silly addNameRange   [ '0.0.1',
-49 silly addNameRange     '0.0.2',
-49 silly addNameRange     '0.0.3',
-49 silly addNameRange     '0.0.4',
-49 silly addNameRange     '0.0.5',
-49 silly addNameRange     '0.0.6',
-49 silly addNameRange     '0.0.7',
-49 silly addNameRange     '0.0.8' ] ]
-50 silly addNamed lwip@0.0.7
-51 verbose addNamed "0.0.7" is a plain semver version for lwip
-52 silly cache afterAdd lwip@0.0.7
-53 verbose afterAdd /Users/ryan/.npm/lwip/0.0.7/package/package.json not in flight; writing
-54 verbose afterAdd /Users/ryan/.npm/lwip/0.0.7/package/package.json written
-55 silly fetchNamedPackageData async
-56 silly mapToRegistry name async
-57 silly mapToRegistry using default registry
-58 silly mapToRegistry registry https://registry.npmjs.org/
-59 silly mapToRegistry uri https://registry.npmjs.org/async
-60 silly fetchNamedPackageData decree
-61 silly mapToRegistry name decree
-62 silly mapToRegistry using default registry
-63 silly mapToRegistry registry https://registry.npmjs.org/
-64 silly mapToRegistry uri https://registry.npmjs.org/decree
-65 silly fetchNamedPackageData nan
-66 silly mapToRegistry name nan
-67 silly mapToRegistry using default registry
-68 silly mapToRegistry registry https://registry.npmjs.org/
-69 silly mapToRegistry uri https://registry.npmjs.org/nan
-70 verbose request uri https://registry.npmjs.org/decree
-71 verbose request no auth needed
-72 info attempt registry request try #1 at 1:57:37 PM
-73 verbose etag "5OLQ6R3CF33L8ASY7LDDINQC"
-74 http request GET https://registry.npmjs.org/decree
-75 verbose request uri https://registry.npmjs.org/async
-76 verbose request no auth needed
-77 info attempt registry request try #1 at 1:57:37 PM
-78 verbose etag "6GFGM6IGXEF0EJRO9VFBJG1R2"
-79 http request GET https://registry.npmjs.org/async
-80 verbose request uri https://registry.npmjs.org/nan
-81 verbose request no auth needed
-82 info attempt registry request try #1 at 1:57:37 PM
-83 verbose etag "5E01JR4VXRYFNTLPNNJ0N9QD8"
-84 http request GET https://registry.npmjs.org/nan
-85 http 304 https://registry.npmjs.org/nan
-86 verbose headers { date: 'Mon, 16 Nov 2015 18:57:37 GMT',
-86 verbose headers   via: '1.1 varnish',
-86 verbose headers   'cache-control': 'max-age=60',
-86 verbose headers   etag: '"5E01JR4VXRYFNTLPNNJ0N9QD8"',
-86 verbose headers   age: '55',
-86 verbose headers   connection: 'keep-alive',
-86 verbose headers   'x-served-by': 'cache-iad2133-IAD',
-86 verbose headers   'x-cache': 'HIT',
-86 verbose headers   'x-cache-hits': '6',
-86 verbose headers   'x-timer': 'S1447700257.295445,VS0,VE0',
-86 verbose headers   vary: 'Accept' }
-87 silly get cb [ 304,
-87 silly get   { date: 'Mon, 16 Nov 2015 18:57:37 GMT',
-87 silly get     via: '1.1 varnish',
-87 silly get     'cache-control': 'max-age=60',
-87 silly get     etag: '"5E01JR4VXRYFNTLPNNJ0N9QD8"',
-87 silly get     age: '55',
-87 silly get     connection: 'keep-alive',
-87 silly get     'x-served-by': 'cache-iad2133-IAD',
-87 silly get     'x-cache': 'HIT',
-87 silly get     'x-cache-hits': '6',
-87 silly get     'x-timer': 'S1447700257.295445,VS0,VE0',
-87 silly get     vary: 'Accept' } ]
-88 verbose etag https://registry.npmjs.org/nan from cache
-89 verbose get saving nan to /Users/ryan/.npm/registry.npmjs.org/nan/.cache.json
-90 http 304 https://registry.npmjs.org/async
-91 verbose headers { date: 'Mon, 16 Nov 2015 18:57:37 GMT',
-91 verbose headers   via: '1.1 varnish',
-91 verbose headers   'cache-control': 'max-age=60',
-91 verbose headers   etag: '"6GFGM6IGXEF0EJRO9VFBJG1R2"',
-91 verbose headers   age: '58',
-91 verbose headers   connection: 'keep-alive',
-91 verbose headers   'x-served-by': 'cache-iad2145-IAD',
-91 verbose headers   'x-cache': 'HIT',
-91 verbose headers   'x-cache-hits': '14',
-91 verbose headers   'x-timer': 'S1447700257.300061,VS0,VE0',
-91 verbose headers   vary: 'Accept' }
-92 silly get cb [ 304,
-92 silly get   { date: 'Mon, 16 Nov 2015 18:57:37 GMT',
-92 silly get     via: '1.1 varnish',
-92 silly get     'cache-control': 'max-age=60',
-92 silly get     etag: '"6GFGM6IGXEF0EJRO9VFBJG1R2"',
-92 silly get     age: '58',
-92 silly get     connection: 'keep-alive',
-92 silly get     'x-served-by': 'cache-iad2145-IAD',
-92 silly get     'x-cache': 'HIT',
-92 silly get     'x-cache-hits': '14',
-92 silly get     'x-timer': 'S1447700257.300061,VS0,VE0',
-92 silly get     vary: 'Accept' } ]
-93 verbose etag https://registry.npmjs.org/async from cache
-94 verbose get saving async to /Users/ryan/.npm/registry.npmjs.org/async/.cache.json
-95 silly resolveWithNewModule nan@1.9.0 checking installable status
-96 silly cache add args [ 'nan@^1.8.4', null ]
-97 verbose cache add spec nan@^1.8.4
-98 silly cache add parsed spec Result {
-98 silly cache add   raw: 'nan@^1.8.4',
-98 silly cache add   scope: null,
-98 silly cache add   name: 'nan',
-98 silly cache add   rawSpec: '^1.8.4',
-98 silly cache add   spec: '>=1.8.4 <2.0.0',
-98 silly cache add   type: 'range' }
-99 silly addNamed nan@>=1.8.4 <2.0.0
-100 verbose addNamed ">=1.8.4 <2.0.0" is a valid semver range for nan
-101 silly addNameRange { name: 'nan', range: '>=1.8.4 <2.0.0', hasData: false }
-102 silly mapToRegistry name nan
-103 silly mapToRegistry using default registry
-104 silly mapToRegistry registry https://registry.npmjs.org/
-105 silly mapToRegistry uri https://registry.npmjs.org/nan
-106 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
-107 silly resolveWithNewModule async@0.9.2 checking installable status
-108 silly cache add args [ 'async@~0.9.0', null ]
-109 verbose cache add spec async@~0.9.0
-110 silly cache add parsed spec Result {
-110 silly cache add   raw: 'async@~0.9.0',
-110 silly cache add   scope: null,
-110 silly cache add   name: 'async',
-110 silly cache add   rawSpec: '~0.9.0',
-110 silly cache add   spec: '>=0.9.0 <0.10.0',
-110 silly cache add   type: 'range' }
-111 silly addNamed async@>=0.9.0 <0.10.0
-112 verbose addNamed ">=0.9.0 <0.10.0" is a valid semver range for async
-113 silly addNameRange { name: 'async', range: '>=0.9.0 <0.10.0', hasData: false }
-114 silly mapToRegistry name async
-115 silly mapToRegistry using default registry
-116 silly mapToRegistry registry https://registry.npmjs.org/
-117 silly mapToRegistry uri https://registry.npmjs.org/async
-118 verbose addNameRange registry:https://registry.npmjs.org/async not in flight; fetching
-119 http 304 https://registry.npmjs.org/decree
-120 verbose headers { date: 'Mon, 16 Nov 2015 18:57:37 GMT',
-120 verbose headers   via: '1.1 varnish',
-120 verbose headers   'cache-control': 'max-age=60',
-120 verbose headers   etag: '"5OLQ6R3CF33L8ASY7LDDINQC"',
-120 verbose headers   age: '0',
-120 verbose headers   connection: 'keep-alive',
-120 verbose headers   'x-served-by': 'cache-iad2131-IAD',
-120 verbose headers   'x-cache': 'HIT',
-120 verbose headers   'x-cache-hits': '1',
-120 verbose headers   'x-timer': 'S1447700257.291559,VS0,VE14',
-120 verbose headers   vary: 'Accept' }
-121 silly get cb [ 304,
-121 silly get   { date: 'Mon, 16 Nov 2015 18:57:37 GMT',
-121 silly get     via: '1.1 varnish',
-121 silly get     'cache-control': 'max-age=60',
-121 silly get     etag: '"5OLQ6R3CF33L8ASY7LDDINQC"',
-121 silly get     age: '0',
-121 silly get     connection: 'keep-alive',
-121 silly get     'x-served-by': 'cache-iad2131-IAD',
-121 silly get     'x-cache': 'HIT',
-121 silly get     'x-cache-hits': '1',
-121 silly get     'x-timer': 'S1447700257.291559,VS0,VE14',
-121 silly get     vary: 'Accept' } ]
-122 verbose etag https://registry.npmjs.org/decree from cache
-123 verbose get saving decree to /Users/ryan/.npm/registry.npmjs.org/decree/.cache.json
-124 verbose get https://registry.npmjs.org/nan not expired, no request
-125 silly addNameRange number 2 { name: 'nan', range: '>=1.8.4 <2.0.0', hasData: true }
-126 silly addNameRange versions [ 'nan',
-126 silly addNameRange   [ '0.3.0-wip',
-126 silly addNameRange     '0.3.0-wip2',
-126 silly addNameRange     '0.3.0',
-126 silly addNameRange     '0.3.1',
-126 silly addNameRange     '0.3.2',
-126 silly addNameRange     '0.4.0',
-126 silly addNameRange     '0.4.1',
-126 silly addNameRange     '0.4.2',
-126 silly addNameRange     '0.4.3',
-126 silly addNameRange     '0.4.4',
-126 silly addNameRange     '0.5.0',
-126 silly addNameRange     '0.5.1',
-126 silly addNameRange     '0.5.2',
-126 silly addNameRange     '0.6.0',
-126 silly addNameRange     '0.7.0',
-126 silly addNameRange     '0.7.1',
-126 silly addNameRange     '0.8.0',
-126 silly addNameRange     '1.0.0',
-126 silly addNameRange     '1.1.0',
-126 silly addNameRange     '1.1.1',
-126 silly addNameRange     '1.1.2',
-126 silly addNameRange     '1.2.0',
-126 silly addNameRange     '1.3.0',
-126 silly addNameRange     '1.4.0',
-126 silly addNameRange     '1.4.1',
-126 silly addNameRange     '1.5.0',
-126 silly addNameRange     '1.4.2',
-126 silly addNameRange     '1.4.3',
-126 silly addNameRange     '1.5.1',
-126 silly addNameRange     '1.5.2',
-126 silly addNameRange     '1.6.0',
-126 silly addNameRange     '1.5.3',
-126 silly addNameRange     '1.6.1',
-126 silly addNameRange     '1.6.2',
-126 silly addNameRange     '1.7.0',
-126 silly addNameRange     '1.8.0',
-126 silly addNameRange     '1.8.1',
-126 silly addNameRange     '1.8.2',
-126 silly addNameRange     '1.8.3',
-126 silly addNameRange     '1.8.4',
-126 silly addNameRange     '1.9.0',
-126 silly addNameRange     '2.0.0',
-126 silly addNameRange     '2.0.1',
-126 silly addNameRange     '2.0.2',
-126 silly addNameRange     '2.0.3',
-126 silly addNameRange     '2.0.4',
-126 silly addNameRange     '2.0.5',
-126 silly addNameRange     '2.0.6',
-126 silly addNameRange     '2.0.7',
-126 silly addNameRange     '2.0.8',
-126 silly addNameRange     '2.0.9',
-126 silly addNameRange     '2.1.0' ] ]
-127 silly addNamed nan@1.9.0
-128 verbose addNamed "1.9.0" is a plain semver version for nan
-129 verbose get https://registry.npmjs.org/async not expired, no request
-130 silly addNameRange number 2 { name: 'async', range: '>=0.9.0 <0.10.0', hasData: true }
-131 silly addNameRange versions [ 'async',
-131 silly addNameRange   [ '0.1.0',
-131 silly addNameRange     '0.1.1',
-131 silly addNameRange     '0.1.2',
-131 silly addNameRange     '0.1.3',
-131 silly addNameRange     '0.1.4',
-131 silly addNameRange     '0.1.5',
-131 silly addNameRange     '0.1.6',
-131 silly addNameRange     '0.1.7',
-131 silly addNameRange     '0.1.8',
-131 silly addNameRange     '0.1.9',
-131 silly addNameRange     '0.1.10',
-131 silly addNameRange     '0.1.11',
-131 silly addNameRange     '0.1.12',
-131 silly addNameRange     '0.1.13',
-131 silly addNameRange     '0.1.14',
-131 silly addNameRange     '0.1.15',
-131 silly addNameRange     '0.1.16',
-131 silly addNameRange     '0.1.17',
-131 silly addNameRange     '0.1.18',
-131 silly addNameRange     '0.1.19',
-131 silly addNameRange     '0.1.20',
-131 silly addNameRange     '0.1.21',
-131 silly addNameRange     '0.1.22',
-131 silly addNameRange     '0.2.0',
-131 silly addNameRange     '0.2.1',
-131 silly addNameRange     '0.2.2',
-131 silly addNameRange     '0.2.3',
-131 silly addNameRange     '0.2.4',
-131 silly addNameRange     '0.2.5',
-131 silly addNameRange     '0.2.6',
-131 silly addNameRange     '0.2.7',
-131 silly addNameRange     '0.2.8',
-131 silly addNameRange     '0.2.9',
-131 silly addNameRange     '0.2.10',
-131 silly addNameRange     '0.3.0',
-131 silly addNameRange     '0.4.0',
-131 silly addNameRange     '0.4.1',
-131 silly addNameRange     '0.5.0',
-131 silly addNameRange     '0.6.0',
-131 silly addNameRange     '0.6.1',
-131 silly addNameRange     '0.6.2',
-131 silly addNameRange     '0.7.0',
-131 silly addNameRange     '0.8.0',
-131 silly addNameRange     '0.9.0',
-131 silly addNameRange     '0.9.2',
-131 silly addNameRange     '1.0.0',
-131 silly addNameRange     '1.1.0',
-131 silly addNameRange     '1.2.0',
-131 silly addNameRange     '1.1.1',
-131 silly addNameRange     '1.2.1',
-131 silly addNameRange     '1.3.0',
-131 silly addNameRange     '1.4.0',
-131 silly addNameRange     '1.4.1',
-131 silly addNameRange     '1.4.2',
-131 silly addNameRange     '1.5.0' ] ]
-132 silly addNamed async@0.9.2
-133 verbose addNamed "0.9.2" is a plain semver version for async
-134 silly cache afterAdd nan@1.9.0
-135 verbose afterAdd /Users/ryan/.npm/nan/1.9.0/package/package.json not in flight; writing
-136 silly cache afterAdd async@0.9.2
-137 verbose afterAdd /Users/ryan/.npm/async/0.9.2/package/package.json not in flight; writing
-138 silly resolveWithNewModule decree@0.0.6 checking installable status
-139 silly cache add args [ 'decree@0.0.6', null ]
-140 verbose cache add spec decree@0.0.6
-141 silly cache add parsed spec Result {
-141 silly cache add   raw: 'decree@0.0.6',
-141 silly cache add   scope: null,
-141 silly cache add   name: 'decree',
-141 silly cache add   rawSpec: '0.0.6',
-141 silly cache add   spec: '0.0.6',
-141 silly cache add   type: 'version' }
-142 silly addNamed decree@0.0.6
-143 verbose addNamed "0.0.6" is a plain semver version for decree
-144 silly mapToRegistry name decree
-145 silly mapToRegistry using default registry
-146 silly mapToRegistry registry https://registry.npmjs.org/
-147 silly mapToRegistry uri https://registry.npmjs.org/decree
-148 verbose addNameVersion registry:https://registry.npmjs.org/decree not in flight; fetching
-149 verbose get https://registry.npmjs.org/decree not expired, no request
-150 verbose afterAdd /Users/ryan/.npm/nan/1.9.0/package/package.json written
-151 verbose afterAdd /Users/ryan/.npm/async/0.9.2/package/package.json written
-152 silly cache afterAdd decree@0.0.6
-153 verbose afterAdd /Users/ryan/.npm/decree/0.0.6/package/package.json not in flight; writing
-154 verbose afterAdd /Users/ryan/.npm/decree/0.0.6/package/package.json written
-155 silly fetchNamedPackageData lodash-node
-156 silly mapToRegistry name lodash-node
-157 silly mapToRegistry using default registry
-158 silly mapToRegistry registry https://registry.npmjs.org/
-159 silly mapToRegistry uri https://registry.npmjs.org/lodash-node
-160 verbose request uri https://registry.npmjs.org/lodash-node
-161 verbose request no auth needed
-162 info attempt registry request try #1 at 1:57:37 PM
-163 verbose etag "6TU9MHML0YI83FSOXZOX4DE0T"
-164 http request GET https://registry.npmjs.org/lodash-node
-165 http 304 https://registry.npmjs.org/lodash-node
-166 verbose headers { date: 'Mon, 16 Nov 2015 18:57:37 GMT',
-166 verbose headers   via: '1.1 varnish',
-166 verbose headers   'cache-control': 'max-age=60',
-166 verbose headers   etag: '"6TU9MHML0YI83FSOXZOX4DE0T"',
-166 verbose headers   age: '48',
-166 verbose headers   connection: 'keep-alive',
-166 verbose headers   'x-served-by': 'cache-iad2129-IAD',
-166 verbose headers   'x-cache': 'HIT',
-166 verbose headers   'x-cache-hits': '2',
-166 verbose headers   'x-timer': 'S1447700257.400729,VS0,VE0',
-166 verbose headers   vary: 'Accept' }
-167 silly get cb [ 304,
-167 silly get   { date: 'Mon, 16 Nov 2015 18:57:37 GMT',
-167 silly get     via: '1.1 varnish',
-167 silly get     'cache-control': 'max-age=60',
-167 silly get     etag: '"6TU9MHML0YI83FSOXZOX4DE0T"',
-167 silly get     age: '48',
-167 silly get     connection: 'keep-alive',
-167 silly get     'x-served-by': 'cache-iad2129-IAD',
-167 silly get     'x-cache': 'HIT',
-167 silly get     'x-cache-hits': '2',
-167 silly get     'x-timer': 'S1447700257.400729,VS0,VE0',
-167 silly get     vary: 'Accept' } ]
-168 verbose etag https://registry.npmjs.org/lodash-node from cache
-169 verbose get saving lodash-node to /Users/ryan/.npm/registry.npmjs.org/lodash-node/.cache.json
-170 silly resolveWithNewModule lodash-node@2.4.1 checking installable status
-171 silly cache add args [ 'lodash-node@^2.4.1', null ]
-172 verbose cache add spec lodash-node@^2.4.1
-173 silly cache add parsed spec Result {
-173 silly cache add   raw: 'lodash-node@^2.4.1',
-173 silly cache add   scope: null,
-173 silly cache add   name: 'lodash-node',
-173 silly cache add   rawSpec: '^2.4.1',
-173 silly cache add   spec: '>=2.4.1 <3.0.0',
-173 silly cache add   type: 'range' }
-174 silly addNamed lodash-node@>=2.4.1 <3.0.0
-175 verbose addNamed ">=2.4.1 <3.0.0" is a valid semver range for lodash-node
-176 silly addNameRange { name: 'lodash-node', range: '>=2.4.1 <3.0.0', hasData: false }
-177 silly mapToRegistry name lodash-node
-178 silly mapToRegistry using default registry
-179 silly mapToRegistry registry https://registry.npmjs.org/
-180 silly mapToRegistry uri https://registry.npmjs.org/lodash-node
-181 verbose addNameRange registry:https://registry.npmjs.org/lodash-node not in flight; fetching
-182 verbose get https://registry.npmjs.org/lodash-node not expired, no request
-183 silly addNameRange number 2 { name: 'lodash-node', range: '>=2.4.1 <3.0.0', hasData: true }
-184 silly addNameRange versions [ 'lodash-node',
-184 silly addNameRange   [ '2.0.0',
-184 silly addNameRange     '2.1.0',
-184 silly addNameRange     '2.2.0',
-184 silly addNameRange     '2.2.1',
-184 silly addNameRange     '2.3.0',
-184 silly addNameRange     '2.4.0',
-184 silly addNameRange     '2.4.1',
-184 silly addNameRange     '3.0.0',
-184 silly addNameRange     '3.0.1',
-184 silly addNameRange     '3.1.0',
-184 silly addNameRange     '3.2.0',
-184 silly addNameRange     '3.3.0',
-184 silly addNameRange     '3.3.1',
-184 silly addNameRange     '3.4.0',
-184 silly addNameRange     '3.5.0',
-184 silly addNameRange     '3.6.0',
-184 silly addNameRange     '3.7.0',
-184 silly addNameRange     '3.8.0',
-184 silly addNameRange     '3.9.0',
-184 silly addNameRange     '3.9.1',
-184 silly addNameRange     '3.9.2',
-184 silly addNameRange     '3.9.3',
-184 silly addNameRange     '3.10.0',
-184 silly addNameRange     '3.10.1' ] ]
-185 silly addNamed lodash-node@2.4.1
-186 verbose addNamed "2.4.1" is a plain semver version for lodash-node
-187 silly cache afterAdd lodash-node@2.4.1
-188 verbose afterAdd /Users/ryan/.npm/lodash-node/2.4.1/package/package.json not in flight; writing
-189 verbose afterAdd /Users/ryan/.npm/lodash-node/2.4.1/package/package.json written
-190 silly loadAllDepsIntoIdealTree Finishing
-191 silly idealTree:prePrune ml_workshiop@0.0.1
-191 silly idealTree:prePrune ├── assertion-error@1.0.1
-191 silly idealTree:prePrune ├── async@0.9.2
-191 silly idealTree:prePrune ├── chai@3.4.1
-191 silly idealTree:prePrune ├── decree@0.0.6
-191 silly idealTree:prePrune ├─┬ deep-eql@0.1.3
-191 silly idealTree:prePrune │ └── type-detect@0.1.1
-191 silly idealTree:prePrune ├── lodash-node@2.4.1
-191 silly idealTree:prePrune ├── lwip@0.0.7
-191 silly idealTree:prePrune ├── nan@1.9.0
-191 silly idealTree:prePrune └── type-detect@1.0.0
-192 silly loadIdealTree Finishing
-193 silly currentTree ml_workshiop@0.0.1
-193 silly currentTree ├── assertion-error@1.0.1
-193 silly currentTree ├── chai@3.4.1
-193 silly currentTree ├─┬ deep-eql@0.1.3
-193 silly currentTree │ └── type-detect@0.1.1
-193 silly currentTree └── type-detect@1.0.0
-194 silly idealTree ml_workshiop@0.0.1
-194 silly idealTree ├── assertion-error@1.0.1
-194 silly idealTree ├── async@0.9.2
-194 silly idealTree ├── chai@3.4.1
-194 silly idealTree ├── decree@0.0.6
-194 silly idealTree ├─┬ deep-eql@0.1.3
-194 silly idealTree │ └── type-detect@0.1.1
-194 silly idealTree ├── lodash-node@2.4.1
-194 silly idealTree ├── lwip@0.0.7
-194 silly idealTree ├── nan@1.9.0
-194 silly idealTree └── type-detect@1.0.0
-195 silly generateActionsToTake Starting
-196 silly install generateActionsToTake
-197 warn checkPermissions Missing write access to /Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules
-198 silly rollbackFailedOptional Starting
-199 silly rollbackFailedOptional Finishing
-200 silly runTopLevelLifecycles Starting
-201 silly runTopLevelLifecycles Finishing
-202 silly install printInstalled
-203 warn EPACKAGEJSON ml_workshiop@0.0.1 No repository field.
-204 verbose stack Error: EACCES: permission denied, access '/Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules'
-204 verbose stack     at Error (native)
-205 verbose cwd /Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/001_knn
-206 error Darwin 15.0.0
-207 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
-208 error node v5.0.0
-209 error npm  v3.3.6
-210 error path /Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules
-211 error code EACCES
-212 error errno -13
-213 error syscall access
-214 error Error: EACCES: permission denied, access '/Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules'
-214 error     at Error (native)
-214 error  { [Error: EACCES: permission denied, access '/Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules']
-214 error   errno: -13,
-214 error   code: 'EACCES',
-214 error   syscall: 'access',
-214 error   path: '/Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules' }
-215 error Please try running this command again as root/Administrator.
-216 verbose exit [ -13, true ]
+7 silly fetchPackageMetaData lodash
+8 silly fetchNamedPackageData lodash
+9 silly mapToRegistry name lodash
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/lodash
+13 verbose request uri https://registry.npmjs.org/lodash
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 2:18:50 PM
+16 verbose request id 834adf217e5c8574
+17 verbose etag "BL7R06I1GGUCEUNHS5XF6T48W"
+18 http request GET https://registry.npmjs.org/lodash
+19 http 304 https://registry.npmjs.org/lodash
+20 verbose headers { date: 'Mon, 16 Nov 2015 19:18:50 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   'cache-control': 'max-age=60',
+20 verbose headers   etag: '"BL7R06I1GGUCEUNHS5XF6T48W"',
+20 verbose headers   age: '11',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-iad2131-IAD',
+20 verbose headers   'x-cache': 'HIT',
+20 verbose headers   'x-cache-hits': '3',
+20 verbose headers   'x-timer': 'S1447701530.180964,VS0,VE0',
+20 verbose headers   vary: 'Accept' }
+21 silly get cb [ 304,
+21 silly get   { date: 'Mon, 16 Nov 2015 19:18:50 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     'cache-control': 'max-age=60',
+21 silly get     etag: '"BL7R06I1GGUCEUNHS5XF6T48W"',
+21 silly get     age: '11',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-iad2131-IAD',
+21 silly get     'x-cache': 'HIT',
+21 silly get     'x-cache-hits': '3',
+21 silly get     'x-timer': 'S1447701530.180964,VS0,VE0',
+21 silly get     vary: 'Accept' } ]
+22 verbose etag https://registry.npmjs.org/lodash from cache
+23 verbose get saving lodash to /Users/ryan/.npm/registry.npmjs.org/lodash/.cache.json
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly resolveWithNewModule lodash@3.10.1 checking installable status
+37 silly cache add args [ 'lodash', null ]
+38 verbose cache add spec lodash
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'lodash',
+39 silly cache add   scope: null,
+39 silly cache add   name: 'lodash',
+39 silly cache add   rawSpec: '',
+39 silly cache add   spec: '*',
+39 silly cache add   type: 'range' }
+40 silly addNamed lodash@*
+41 verbose addNamed "*" is a valid semver range for lodash
+42 silly addNameRange { name: 'lodash', range: '*', hasData: false }
+43 silly mapToRegistry name lodash
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry uri https://registry.npmjs.org/lodash
+47 verbose addNameRange registry:https://registry.npmjs.org/lodash not in flight; fetching
+48 verbose get https://registry.npmjs.org/lodash not expired, no request
+49 silly addNameRange number 2 { name: 'lodash', range: '*', hasData: true }
+50 silly addNameRange versions [ 'lodash',
+50 silly addNameRange   [ '0.1.0',
+50 silly addNameRange     '0.2.0',
+50 silly addNameRange     '0.2.1',
+50 silly addNameRange     '0.2.2',
+50 silly addNameRange     '0.3.0',
+50 silly addNameRange     '0.3.1',
+50 silly addNameRange     '0.3.2',
+50 silly addNameRange     '0.4.0',
+50 silly addNameRange     '0.4.1',
+50 silly addNameRange     '0.4.2',
+50 silly addNameRange     '0.5.0-rc.1',
+50 silly addNameRange     '0.5.0',
+50 silly addNameRange     '0.5.1',
+50 silly addNameRange     '0.5.2',
+50 silly addNameRange     '0.6.0',
+50 silly addNameRange     '0.6.1',
+50 silly addNameRange     '0.7.0',
+50 silly addNameRange     '0.8.0',
+50 silly addNameRange     '0.8.1',
+50 silly addNameRange     '0.8.2',
+50 silly addNameRange     '0.9.0',
+50 silly addNameRange     '0.9.1',
+50 silly addNameRange     '0.9.2',
+50 silly addNameRange     '0.10.0',
+50 silly addNameRange     '1.0.0-rc.1',
+50 silly addNameRange     '1.0.0-rc.2',
+50 silly addNameRange     '1.0.0-rc.3',
+50 silly addNameRange     '1.0.0',
+50 silly addNameRange     '1.0.1',
+50 silly addNameRange     '1.1.0',
+50 silly addNameRange     '1.1.1',
+50 silly addNameRange     '1.2.0',
+50 silly addNameRange     '1.2.1',
+50 silly addNameRange     '1.3.0',
+50 silly addNameRange     '1.3.1',
+50 silly addNameRange     '2.0.0',
+50 silly addNameRange     '2.1.0',
+50 silly addNameRange     '2.2.0',
+50 silly addNameRange     '2.2.1',
+50 silly addNameRange     '2.3.0',
+50 silly addNameRange     '2.4.0',
+50 silly addNameRange     '2.4.1',
+50 silly addNameRange     '3.0.0',
+50 silly addNameRange     '3.0.1',
+50 silly addNameRange     '3.1.0',
+50 silly addNameRange     '3.2.0',
+50 silly addNameRange     '3.3.0',
+50 silly addNameRange     '3.3.1',
+50 silly addNameRange     '3.4.0',
+50 silly addNameRange     '3.5.0',
+50 silly addNameRange     '3.6.0',
+50 silly addNameRange     '1.0.2',
+50 silly addNameRange     '3.7.0',
+50 silly addNameRange     '2.4.2',
+50 silly addNameRange     '3.8.0',
+50 silly addNameRange     '3.9.0',
+50 silly addNameRange     '3.9.1',
+50 silly addNameRange     '3.9.2',
+50 silly addNameRange     '3.9.3',
+50 silly addNameRange     '3.10.0',
+50 silly addNameRange     '3.10.1' ] ]
+51 silly addNamed lodash@3.10.1
+52 verbose addNamed "3.10.1" is a plain semver version for lodash
+53 silly cache afterAdd lodash@3.10.1
+54 verbose afterAdd /Users/ryan/.npm/lodash/3.10.1/package/package.json not in flight; writing
+55 verbose afterAdd /Users/ryan/.npm/lodash/3.10.1/package/package.json written
+56 silly loadAllDepsIntoIdealTree Finishing
+57 silly idealTree:prePrune ml_workshiop@0.0.1
+57 silly idealTree:prePrune ├── assertion-error@1.0.1
+57 silly idealTree:prePrune ├── async@0.9.2
+57 silly idealTree:prePrune ├── chai@3.4.1
+57 silly idealTree:prePrune ├── decree@0.0.6
+57 silly idealTree:prePrune ├─┬ deep-eql@0.1.3
+57 silly idealTree:prePrune │ └── type-detect@0.1.1
+57 silly idealTree:prePrune ├── lodash-node@2.4.1
+57 silly idealTree:prePrune ├── lodash@3.10.1
+57 silly idealTree:prePrune ├── lwip@0.0.8
+57 silly idealTree:prePrune ├── nan@2.0.9
+57 silly idealTree:prePrune └── type-detect@1.0.0
+58 silly loadIdealTree Finishing
+59 silly currentTree ml_workshiop@0.0.1
+59 silly currentTree ├── assertion-error@1.0.1
+59 silly currentTree ├── async@0.9.2
+59 silly currentTree ├── chai@3.4.1
+59 silly currentTree ├── decree@0.0.6
+59 silly currentTree ├─┬ deep-eql@0.1.3
+59 silly currentTree │ └── type-detect@0.1.1
+59 silly currentTree ├── lodash-node@2.4.1
+59 silly currentTree ├── lwip@0.0.8
+59 silly currentTree ├── nan@2.0.9
+59 silly currentTree └── type-detect@1.0.0
+60 silly idealTree ml_workshiop@0.0.1
+60 silly idealTree ├── assertion-error@1.0.1
+60 silly idealTree ├── async@0.9.2
+60 silly idealTree ├── chai@3.4.1
+60 silly idealTree ├── decree@0.0.6
+60 silly idealTree ├─┬ deep-eql@0.1.3
+60 silly idealTree │ └── type-detect@0.1.1
+60 silly idealTree ├── lodash-node@2.4.1
+60 silly idealTree ├── lodash@3.10.1
+60 silly idealTree ├── lwip@0.0.8
+60 silly idealTree ├── nan@2.0.9
+60 silly idealTree └── type-detect@1.0.0
+61 silly generateActionsToTake Starting
+62 silly install generateActionsToTake
+63 warn checkPermissions Missing write access to /Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules
+64 silly rollbackFailedOptional Starting
+65 silly rollbackFailedOptional Finishing
+66 silly runTopLevelLifecycles Starting
+67 silly runTopLevelLifecycles Finishing
+68 silly install printInstalled
+69 warn EPACKAGEJSON ml_workshiop@0.0.1 No repository field.
+70 verbose stack Error: EACCES: permission denied, access '/Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules'
+70 verbose stack     at Error (native)
+71 verbose cwd /Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/001_knn
+72 error Darwin 15.0.0
+73 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save" "lodash"
+74 error node v5.0.0
+75 error npm  v3.3.6
+76 error path /Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules
+77 error code EACCES
+78 error errno -13
+79 error syscall access
+80 error Error: EACCES: permission denied, access '/Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules'
+80 error     at Error (native)
+80 error  { [Error: EACCES: permission denied, access '/Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules']
+80 error   errno: -13,
+80 error   code: 'EACCES',
+80 error   syscall: 'access',
+80 error   path: '/Users/ryan/Documents/Work/Fullstack_Academy/js-ml-workshop/node_modules' }
+81 error Please try running this command again as root/Administrator.
+82 verbose exit [ -13, true ]

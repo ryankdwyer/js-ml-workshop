@@ -241,7 +241,7 @@ describe('Testing the basic KNN functionality.', function(){
 
 	});
 
-	describe('Extra Credit: Normalization & CNN (Hart\'s Algorithm', function () {
+	describe('Extra Credit: Normalization & CNN (Hart\'s Algorithm)', function () {
 		it('normalizes all features of a vector to between 0 and 1', function () {
 			var knn = new KNN(1);
 			var typeA = randomPoints(10, [1,1], [2,2]).map(function(n) {return [n, 0]});
@@ -250,6 +250,20 @@ describe('Testing the basic KNN functionality.', function(){
 			expect(knn.normalized).to.not.be.empty;
 			expect(knn.normalized[0][0][0] <= 1).to.equal(true);
 			expect(knn.normalized[0].length).to.equal(2);
+		})
+
+		it('runs removes outliers', function () {
+			var knn = new KNN(1);
+			var typeA = randomPoints(10, [1,1], [2,2]).map(function(n) {return [n, 0]});
+			var outlier = typeA[0];
+			outlier[1] = 1;
+			typeA.push(outlier);
+			knn.train(typeA);
+			knn.removeOutliers();
+			expect(knn.lessOutliers).to.not.be.empty;
+			expect(knn.lessOutliers[knn.lessOutliers.length-1][1]).to.equal(0);
+			expect(knn.lessOutliers.length).to.equal(10);
+			expect(knn.points.length).to.equal(11);
 		})
 	})
 });

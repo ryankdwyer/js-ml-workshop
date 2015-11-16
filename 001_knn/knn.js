@@ -1,3 +1,4 @@
+var _ = require('lodash');
 
 //Start off with what passes the first test.
 function KNN(kSize){
@@ -95,18 +96,20 @@ KNN.prototype._CNN = function (k) {
 };
 
 KNN.prototype.removeOutliers = function () {
-	var tempArr = this.points,
-		tempTestSet = this.points,
+	var self = this;
+	var tempArr = _.cloneDeep(self.points),
+		origPoints = _.cloneDeep(self.points),
 		tempPt,
 		classification;
 	tempArr.forEach(function(el, idx) {
-		tempPt = tempTestSet.splice(idx, 1);
+		tempPt = el;
 		classification = tempPt[1];
-		if (this.predictSingle(tempPt[0]) === classification) {
-			this.lessOutliers.push(tempPt);
+		_.pullAt(self.points, idx);
+		if (self.predictSingle(tempPt[0]) === classification) {
+			self.lessOutliers.push(tempPt);
 		}
-		tempTestSet = this.points;
 	})
+	self.points = origPoints;
 };
 
 KNN.prototype.getVectorLength = function () {
