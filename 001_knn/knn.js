@@ -3,6 +3,9 @@
 function KNN(kSize){
 	this.kSize = kSize;
 	this.points = [];
+	this.normalized = [];
+	this.condensed = [];
+	this.lessOutliers = [];
 }
 
 KNN.prototype.train = function (arr) {
@@ -68,7 +71,7 @@ KNN.prototype.score = function (testData) {
 
 KNN.prototype._normalize = function () {
 	var normalizedPoints = [],
-		dimensions = getVectorLength(),
+		dimensions = this.getVectorLength(),
 		min,
 		max,
 		normalPt;
@@ -83,7 +86,31 @@ KNN.prototype._normalize = function () {
 			normalizedPoints[idx][0].push(normalPt);
 		})
 	}
+	this.normalized = normalizedPoints;
 	return normalizedPoints;
+};
+
+KNN.prototype._CNN = function (k) {
+
+};
+
+KNN.prototype.removeOutliers = function () {
+	var tempArr = this.points,
+		tempTestSet = this.points,
+		tempPt,
+		classification;
+	tempArr.forEach(function(el, idx) {
+		tempPt = tempTestSet.splice(idx, 1);
+		classification = tempPt[1];
+		if (this.predictSingle(tempPt[0]) === classification) {
+			this.lessOutliers.push(tempPt);
+		}
+		tempTestSet = this.points;
+	})
+};
+
+KNN.prototype.getVectorLength = function () {
+	return this.points[0][0].length;
 };
 
 function vectorSub (vectorA, vectorB) {
@@ -134,10 +161,6 @@ function getMin (vector, idx) {
 
 function getMax (vector, idx) {
 	return Math.max.apply(null, vector.map(function(el) {return el[0][idx]}));
-}
-
-function getVectorLength () {
-	return this.points[0][0].length;
 }
 
 function calcNormalized (x, min, max) {
