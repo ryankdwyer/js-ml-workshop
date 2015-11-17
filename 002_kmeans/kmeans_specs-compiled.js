@@ -301,8 +301,9 @@ describe('Testing required k-means functionality.', function () {
 			knn.train(someElements);
 			console.log('Finding clusters for images consisting of 1 and 0');
 			var res = knn.clusters(2);
-			console.log('Writing images...');
-			writer.exportGrouped(res, someElements, done, "zeroOne");
+			//console.log('Writing images...');
+			done();
+			//writer.exportGrouped(res, someElements, done, "zeroOne")
 		});
 
 		it('finds centroids for data consisting of the characters 5 and 9', function (done) {
@@ -314,8 +315,9 @@ describe('Testing required k-means functionality.', function () {
 			knn.train(someElements);
 			console.log('Finding clusters for images consisting of 5 and 9');
 			var res = knn.clusters(2);
-			console.log('Writing images...');
-			writer.exportGrouped(res, someElements, done, "fiveNine");
+			//console.log('Writing images...');
+			done();
+			//writer.exportGrouped(res, someElements, done, "fiveNine")
 		});
 
 		it('finds centroids for data consisting of the characters 4 and 6 and 8', function (done) {
@@ -327,8 +329,9 @@ describe('Testing required k-means functionality.', function () {
 			knn.train(someElements);
 			console.log('Finding clusters for images consisting of 4 and 6 and 8');
 			var res = knn.clusters(3);
-			console.log('Writing images...');
-			writer.exportGrouped(res, someElements, done, "fourSixEight");
+			//console.log('Writing images...');
+			done();
+			//writer.exportGrouped(res, someElements, done, "fourSixEight")
 		});
 	});
 });
@@ -365,9 +368,9 @@ describe('Testing required k-means functionality.', function () {
   ...of course, most cases will not be nearly as clear as the above.
 */
 
-xdescribe('Testing optional k-means functionality', function () {
+describe('Testing optional k-means functionality', function () {
 
-	xdescribe('The algorithm can determine the number of clusters, not being told how many there are.', function () {
+	describe('The algorithm can determine the number of clusters, not being told how many there are.', function () {
 
 		/* The function 'findClusters' should take a number, which is the maximum
      number of clusters it should search for.
@@ -443,7 +446,7 @@ xdescribe('Testing optional k-means functionality', function () {
     as well as the problem that k-means is ill-suited to detecting certain kinds of cluster.
  	   Anyhow, just do here what you did in the immediately prior section with the fake data.
   */
-	xdescribe('it can determine the number of clusters in the MNIST data as well', function () {
+	describe('it can determine the number of clusters in the MNIST data as well', function () {
 
 		it('can determine the number of clusters when there are two characters', function (done) {
 			//Fifteen second timeout...

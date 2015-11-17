@@ -11,10 +11,6 @@ KMeans.prototype.train = function (points) {
 	this.points = this.points.concat(points);
 };
 
-KMeans.prototype.clusters = function () {
-
-};
-
 KMeans.prototype._distance = function(vectorA, vectorB) {
 	return Math.sqrt(vectorA.reduce(function(prev, curr, idx, arr) {
 		return prev + Math.pow(curr - vectorB[idx], 2);
@@ -87,14 +83,26 @@ KMeans.prototype._clusters = function (k, tD) {
 		newCentroids;
 	function minDistance (centroids, tD) {
 		newCentroids = self._shiftCentroids(centroids, tD);
-		if (self._haveShifted(centroids, newCentroids)) {
-			return minDistance(newCentroids, tD);
-		}
+		if (self._haveShifted(centroids, newCentroids)) return minDistance(newCentroids, tD);
 		else return newCentroids;
 	}
 	return minDistance(centroids, tD);
-
 };
+
+KMeans.prototype._manyClusters = function (rounds, k) {
+	var centroids = [];
+	for (let i = 0; i < rounds; i++) {
+		centroids.push(this._clusters(k, this.points));
+	}
+	return centroids;
+};
+
+KMeans.prototype.clusters = function(clusterNum){
+	var self = this;
+	return self._max( self._manyClusters( self.clusterAttempts, clusterNum ) , function(cluster){
+		return -self._clusterEvaluator(cluster, self.points);
+	});
+}
 
 function forgyMethod (k, vectorCount) {
 	var indexes = [],
@@ -103,7 +111,6 @@ function forgyMethod (k, vectorCount) {
 		idx = Math.round(Math.random() * (vectorCount-1));
 		if (indexes.indexOf(idx) === -1) indexes.push(idx);
 	}
-	console.log(indexes);
 	return indexes;
 }
 
