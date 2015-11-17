@@ -11,7 +11,10 @@ var writer = require('../lib/writer');
   Yes, you can use it for the '_distance' function below if you wish.
 */
 var distance = function(one,two){
-	return Math.sqrt(one.reduce(function(old, _, index){return old + Math.pow( one[index] - two[index], 2) }, 0));
+	return Math.sqrt(one.reduce(function(old, _, index){
+			return old + Math.pow( one[index] - two[index], 2)
+		}, 0)
+	);
 }
 
 
@@ -44,7 +47,7 @@ describe('Testing required k-means functionality.', function(){
 	   look through them in any event, though, to get an idea of the kinds of
 	   functions you will need to write.
 	 */
-	xdescribe('Optional helper functions to help build the k-means algorithm', function(){
+	describe('Optional helper functions to help build the k-means algorithm', function(){
 
 		/* The function '_distance' takes as input two vectors of any length,
 		   and returns the Euclidean norm of the difference between them
