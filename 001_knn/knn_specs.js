@@ -247,12 +247,13 @@ describe('Testing the basic KNN functionality.', function(){
 			var typeA = randomPoints(10, [1,1], [2,2]).map(function(n) {return [n, 0]});
 			knn.train(typeA);
 			knn._normalize();
+			expect(typeof knn._normalize).to.be.equal('function');
 			expect(knn.normalized).to.not.be.empty;
 			expect(knn.normalized[0][0][0] <= 1).to.equal(true);
 			expect(knn.normalized[0].length).to.equal(2);
 		})
 
-		it('runs removes outliers', function () {
+		it('removes outliers', function () {
 			var knn = new KNN(1);
 			var typeA = randomPoints(10, [1,1], [2,2]).map(function(n) {return [n, 0]});
 			var outlier = typeA[0];
@@ -260,6 +261,7 @@ describe('Testing the basic KNN functionality.', function(){
 			typeA.push(outlier);
 			knn.train(typeA);
 			knn.removeOutliers();
+			expect(typeof knn.removeOutliers).to.be.equal('function');
 			expect(knn.lessOutliers).to.not.be.empty;
 			expect(knn.lessOutliers[knn.lessOutliers.length-1][1]).to.equal(0);
 			expect(knn.lessOutliers.length).to.equal(10);

@@ -5,7 +5,7 @@ function KMeans(options) {
 		options = {};
 	}
 	this.minClusterMove = options.minClusterMove || 0.0001;
-	this.clusterAttempts = 10;
+	this.clusterAttempts = 2;
 	this.points = [];
 }
 
@@ -14,7 +14,8 @@ KMeans.prototype.train = function (points) {
 };
 
 KMeans.prototype._distance = function (vectorA, vectorB) {
-	return Math.sqrt(vectorA.reduce(function (prev, curr, idx, arr) {
+
+	return Math.sqrt(vectorA.reduce(function (prev, curr, idx) {
 		return prev + Math.pow(curr - vectorB[idx], 2);
 	}, 0));
 };
@@ -122,6 +123,30 @@ KMeans.prototype.clusters = function (clusterNum) {
 	return self._max(self._manyClusters(self.clusterAttempts, clusterNum), function (cluster) {
 		return -self._clusterEvaluator(cluster, self.points);
 	});
+};
+
+KMeans.prototype.findClusters = function (maxClusters) {
+	var self = this;
+	var results = [];
+	var ans;
+	for (var i = 1; i <= maxClusters; i++) {
+		var bestCentroids = self.clusters(i);
+		var score = self._clusterEvaluator(bestCentroids, self.points);
+		results.push([score, bestCentroids]);
+	}
+	for (var i = 1; i < results.length; i++) {
+		var change = (results[i][0] - results[i - 1][0]) / results[i - 1][0];
+		results[i].push(-change);
+	}
+	var max = -1000000;
+	results.forEach(function (el) {
+		console.log(el[2]);
+		if (el[2] > max) {
+			ans = el[1];
+			max = el[2];
+		}
+	});
+	return ans;
 };
 
 function forgyMethod(k, vectorCount) {

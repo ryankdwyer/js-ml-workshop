@@ -290,7 +290,7 @@ describe('Testing required k-means functionality.', function () {
     as well as the characters 5 and 9, and the characters 4, 6, and 8.  Some 
     of these groupings are "better" than others.  Which and why?
  */
-	describe('The algorithm finds centroids for the MNIST data "successfully"', function () {
+	xdescribe('The algorithm finds centroids for the MNIST data "successfully"', function () {
 
 		it('finds centroids data consisting of the characters 1 and 0', function (done) {
 			this.timeout(10000);
